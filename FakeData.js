@@ -94,4 +94,49 @@ const  UserList = [
     }
   ]
 
-  module.exports = { UserList }
+  const MovieList = [
+    {
+      "id": 0,
+      "name": "Cruz Rose",
+      "yearOfPublication": 2011,
+      "isInTheaters": true
+    },
+    {
+      "id": 1,
+      "name": "Mckay Bradley",
+      "yearOfPublication": 2009,
+      "isInTheaters": false
+    },
+    {
+      "id": 2,
+      "name": "Anderson Blankenship",
+      "yearOfPublication": 2012,
+      "isInTheaters": false
+    },
+    {
+      "id": 3,
+      "name": "Verna Shaffer",
+      "yearOfPublication": 2012,
+      "isInTheaters": false
+    },
+    {
+      "id": 4,
+      "name": "Cleo Schmidt",
+      "yearOfPublication": 2008,
+      "isInTheaters": false
+    },
+    {
+      "id": 5,
+      "name": "Holden Barker",
+      "yearOfPublication": 2008,
+      "isInTheaters": false
+    },
+    {
+      "id": 6,
+      "name": "Chang Reed",
+      "yearOfPublication": 2007,
+      "isInTheaters": false
+    }
+  ]
+
+  module.exports = { UserList, MovieList }

@@ -1,5 +1,7 @@
 const { gql } = require("apollo-server");
 
+//One confusion is assigning type to another query field is similar like aggrigation
+
 const typeDefs = gql`  
     type User { 
         id: ID!
@@ -8,11 +10,24 @@ const typeDefs = gql`
         age: Int! 
         nationality: Nationality!
         friends: [User]
+        favoriteMovies: [Movie!]
     }
+
+    type Movie {
+        id: ID!
+        name: String!
+        yearOfPublication: Int!
+        isInTheaters: Boolean!
+    }
+
     type Query {
         users: [User!]!
-        user(id: ID!): User!   
+        user(id: ID!): User!  
+        movies: [Movie!]!
+        movie(name: String!): Movie!
     }
+
+
 
     enum Nationality {
         CANADA
@@ -23,6 +38,22 @@ const typeDefs = gql`
         TOGO
         MONACO
     }
+
+
 `;
+
+// input CreateUserInput {
+//     name: String!
+//     username: String!
+     
+//     age: Int! 
+//     nationality: Nationality!
+//     friends: [User]
+//     favoriteMovies: [Movie!]
+// }
+
+// type Mutation {
+//     createUser(input: CreateUserInput!): User!
+// }
 
 module.exports = { typeDefs };
