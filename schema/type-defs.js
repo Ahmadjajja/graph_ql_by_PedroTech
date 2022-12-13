@@ -1,6 +1,6 @@
 const { gql } = require("apollo-server");
 
-const typeDefs = gql`
+const typeDefs = gql`  
     type User { 
         id: ID!
         name: String!
@@ -11,7 +11,7 @@ const typeDefs = gql`
     }
     type Query {
         users: [User!]!
-        user(id: ID!): User!   // must pass id as argument and must return user
+        user(id: ID!): User!   
     }
 
     enum Nationality {
